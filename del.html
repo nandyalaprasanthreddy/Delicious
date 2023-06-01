@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delicious</title>
+
+    <link rel="stylesheet" href="del.css" />
+  </head>
+  <body>
+    <form action="">
+      <div><h1>Delicious Buffet Restaurant</h1></div>
+      <div>
+        <table>
+          <tr>
+            <td><label for="customerName">Customer Name</label></td>
+            <td>
+              <input
+                type="text"
+                id="customerName"
+                placeholder="Enter your Name" />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="contactNo">Contact No</label></td>
+            <td>
+              <input
+                type="tel"
+                id="contactNo"
+                placeholder="Enter your mobile number" />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="bookingDate">Date</label></td>
+            <td><input type="date" id="bookingDate" /></td>
+          </tr>
+          <tr>
+            <td><label for="session">Timings</label></td>
+            <td>
+              <input type="radio" id="session1" /> 1-4pm
+
+              <input type="radio" id="session2" /> 4-7pm
+              <input type="radio" id="session3" /> 7-10pm
+            </td>
+          </tr>
+          <tr>
+            <td><label for="">Vegetarian</label></td>
+            <td>
+              <table>
+                <tr>
+                  <td><label for="vegAdult">Adult</label></td>
+                  <td><input type="number" id="vegAdult" /></td>
+                </tr>
+                <tr>
+                  <td><label for="vegKids">Kids(5-9yrs)</label></td>
+                  <td><input type="number" id="vegKids" /></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <tr>
+            <td><label for="">Non-Vegetarian</label></td>
+            <td>
+              <table>
+                <tr>
+                  <td><label for="nonVegAdult">Adult</label></td>
+                  <td><input type="number" id="nonVegAdult" /></td>
+                </tr>
+                <tr>
+                  <td><label for="nonVegKids">Kids(5-9yrs)</label></td>
+                  <td>
+                    <input type="number" id="nonVegKids" />
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <tr>
+            <td><label for="">Occasion</label></td>
+            <td>
+              <input list="occasion" />
+              <datalist id="occasion">
+                <option value="Team dinner">Team dinner</option>
+                <option value="Family reunion">Family reunion</option>
+                <option value="Party">Party</option>
+                <option value="Birthday Celebration">
+                  Birthday Celebration
+                </option>
+                <option value="Team Lunch">Team Lunch</option>
+              </datalist>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="parking">Parking</label></td>
+            <td>
+              <input type="checkbox" id="parking" />
+              <label for="">parking required</label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <button type="submit" id="submit" onclick="billCalculation()">
+                Submit
+              </button>
+            </td>
+            <td><button id="reset" type="reset">Clear</button></td>
+          </tr>
+        </table>
+      </div>
+      <b id="result"></b>
+    </form>
+    <script src="del.js"></script>
+  </body>
+</html>
